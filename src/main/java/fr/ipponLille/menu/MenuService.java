@@ -4,6 +4,7 @@ import fr.ipponLille.menu.command.ChooseCharacter;
 import fr.ipponLille.menu.command.ChooseKart;
 import fr.ipponLille.menu.command.ChooseParachute;
 import fr.ipponLille.menu.command.ChooseWheels;
+import fr.ipponLille.menu.command.ChooseCup;
 import fr.ipponLille.menu.command.InitializeVehicle;
 import fr.ipponLille.menu.command.ValidateVehicle;
 
@@ -19,4 +20,6 @@ public interface MenuService {
   void execute(ChooseParachute chooseParachute);
 
   void execute(ValidateVehicle validateVehicle);
+
+  void execute(ChooseCup validateVehicle);
 }
