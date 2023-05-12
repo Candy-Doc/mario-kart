@@ -1,7 +1,7 @@
 package fr.ipponLille.menu.command;
 
 public class ChooseCup {
-  private int cupId;
+  private final int cupId;
 
   public ChooseCup(int cupId) {
     this.cupId = cupId;

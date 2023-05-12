@@ -6,7 +6,7 @@ import fr.ipponLille.menu.RaceId;
 import java.util.List;
 
 public class CupChosen {
-  private CupId cupId;
+  private final CupId cupId;
   List<RaceId> races;
 
   public CupChosen(CupId cupId, List<RaceId> races) {

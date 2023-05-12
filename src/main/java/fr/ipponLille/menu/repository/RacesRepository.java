@@ -6,5 +6,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface RacesRepository {
-  public Optional<List<RaceId>> fromCupId(int raceId);
+  Optional<List<RaceId>> fromCupId(int raceId);
 }
