@@ -5,5 +5,5 @@ import fr.ipponLille.menu.Wheels;
 import java.util.Optional;
 
 public interface WheelsRepository {
-  Optional<Wheels> fromId(int kartId);
+  Optional<Wheels> fromId(int wheelsId);
 }

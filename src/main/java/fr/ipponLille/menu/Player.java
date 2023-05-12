@@ -19,7 +19,6 @@ import io.candydoc.ddd.annotations.Aggregate;
 @Aggregate(name = "Player", description = "A player with a controller")
 public class Player {
   private final PlayerId id;
-
   private Character character;
   private Vehicle vehicle;
   public Player(int id) {
