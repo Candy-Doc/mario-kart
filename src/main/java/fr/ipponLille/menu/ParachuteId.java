@@ -1,4 +1,9 @@
 package fr.ipponLille.menu;
 
-public record ParachuteId(int id) {
+public class ParachuteId {
+  private final int id;
+
+  public ParachuteId(int id) {
+    this.id = id;
+  }
 }

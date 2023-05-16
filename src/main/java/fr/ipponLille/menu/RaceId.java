@@ -1,4 +1,9 @@
 package fr.ipponLille.menu;
 
-public record RaceId(int id) {
+public class RaceId {
+  private final int id;
+
+  public RaceId(int id) {
+    this.id = id;
+  }
 }

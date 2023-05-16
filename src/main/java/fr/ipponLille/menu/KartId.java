@@ -1,5 +1,10 @@
 package fr.ipponLille.menu;
 
-public record KartId(int id) {
+public class KartId {
 
+  private final int id;
+
+  public KartId(int id) {
+    this.id = id;
+  }
 }
