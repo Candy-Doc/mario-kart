@@ -1,7 +1,7 @@
 package fr.ipponLille.menu.event;
 
 import fr.ipponLille.menu.Kart;
-import fr.ipponLille.menu.PlayerId;
+import fr.ipponLille.sharedKernel.PlayerId;
 import io.candydoc.ddd.annotations.DomainEvent;
 
 @DomainEvent(description = "When a kart is chosen")
@@ -14,7 +14,7 @@ public class KartChosen extends ElementForPlayer {
     this.kart = kart;
   }
 
-  public static KartChosen of(PlayerId id, Kart kart){
-    return new KartChosen(id, kart);
-  }
+//  public static KartChosen of(PlayerId id, Kart kart){
+//    return new KartChosen(id, kart);
+//  }
 }

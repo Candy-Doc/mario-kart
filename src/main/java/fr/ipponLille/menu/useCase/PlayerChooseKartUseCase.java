@@ -1,12 +1,12 @@
 package fr.ipponLille.menu.useCase;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.command.ChooseKart;
 import fr.ipponLille.menu.event.EventPublisher;
 import fr.ipponLille.menu.event.KartChosen;
 import fr.ipponLille.menu.repository.KartRepository;
 import fr.ipponLille.menu.repository.PlayerRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public class PlayerChooseKartUseCase extends AbstractUseCase {
 

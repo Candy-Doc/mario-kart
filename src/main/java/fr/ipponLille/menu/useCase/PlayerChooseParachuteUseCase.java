@@ -1,12 +1,12 @@
 package fr.ipponLille.menu.useCase;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.command.ChooseParachute;
 import fr.ipponLille.menu.event.EventPublisher;
 import fr.ipponLille.menu.event.ParachuteChosen;
 import fr.ipponLille.menu.repository.PlayerRepository;
 import fr.ipponLille.menu.repository.ParachuteRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public class PlayerChooseParachuteUseCase extends AbstractUseCase {
 

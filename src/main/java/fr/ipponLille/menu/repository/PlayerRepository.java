@@ -1,7 +1,7 @@
 package fr.ipponLille.menu.repository;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public interface PlayerRepository {
   public void save(Player player);

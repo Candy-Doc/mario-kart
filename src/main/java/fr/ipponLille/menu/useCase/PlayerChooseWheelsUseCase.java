@@ -1,12 +1,12 @@
 package fr.ipponLille.menu.useCase;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.command.ChooseWheels;
 import fr.ipponLille.menu.event.EventPublisher;
 import fr.ipponLille.menu.event.WheelsChosen;
 import fr.ipponLille.menu.repository.PlayerRepository;
 import fr.ipponLille.menu.repository.WheelsRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public class PlayerChooseWheelsUseCase extends AbstractUseCase {
 

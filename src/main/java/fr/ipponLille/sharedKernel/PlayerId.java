@@ -1,4 +1,4 @@
-package fr.ipponLille.menu;
+package fr.ipponLille.sharedKernel;
 
 import io.candydoc.ddd.annotations.ValueObject;
 

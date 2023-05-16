@@ -19,7 +19,7 @@ public class ChooseCupUseCase extends AbstractUseCase {
 
   public void execute(ChooseCup chooseCup) {
     List<RaceId> races = racesRepository.fromCupId(chooseCup.getCupId()).orElseThrow(() -> new IllegalArgumentException("Cup doesn't exist"));
-    CupChosen cupChosen = CupChosen.of(new CupId(chooseCup.getCupId()), races);
+    CupChosen cupChosen = new CupChosen(new CupId(chooseCup.getCupId()), races);
     eventPublisher.publish(cupChosen);
   }
 }

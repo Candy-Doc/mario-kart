@@ -1,8 +1,10 @@
 package fr.ipponLille.menu.event;
 
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.Vehicle;
+import fr.ipponLille.sharedKernel.PlayerId;
+import io.candydoc.ddd.annotations.DomainEvent;
 
+@DomainEvent()
 public class VehicleInitialized extends ElementForPlayer{
   private final Vehicle vehicle;
 
@@ -11,7 +13,7 @@ public class VehicleInitialized extends ElementForPlayer{
     this.vehicle = vehicle;
   }
 
-  public static VehicleInitialized of(PlayerId id, Vehicle vehicle){
-    return new VehicleInitialized(id, vehicle);
-  }
+//  public static VehicleInitialized of(PlayerId id, Vehicle vehicle){
+//    return new VehicleInitialized(id, vehicle);
+//  }
 }

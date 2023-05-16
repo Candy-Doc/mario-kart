@@ -1,7 +1,7 @@
 package fr.ipponLille.race.repository;
 
-import fr.ipponLille.race.PlayerId;
 import fr.ipponLille.race.Player;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 import java.util.Optional;
 

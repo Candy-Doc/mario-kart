@@ -1,7 +1,7 @@
 package fr.ipponLille.menu.event;
 
 import fr.ipponLille.menu.Character;
-import fr.ipponLille.menu.PlayerId;
+import fr.ipponLille.sharedKernel.PlayerId;
 import io.candydoc.ddd.annotations.DomainEvent;
 
 @DomainEvent(description = "When a character is chosen")
@@ -14,7 +14,7 @@ public class CharacterChosen extends ElementForPlayer {
     this.character = character;
   }
 
-  public static CharacterChosen of(PlayerId id, Character character){
-    return new CharacterChosen(id, character);
-  }
+//  public static CharacterChosen of(PlayerId id, Character character){
+//    return new CharacterChosen(id, character);
+//  }
 }

@@ -1,9 +1,9 @@
 package fr.ipponLille.race;
 
-import fr.ipponLille.race.PlayerId;
 import fr.ipponLille.race.command.ReplacePlayer;
 import fr.ipponLille.race.event.PlayerFallen;
 import fr.ipponLille.race.repository.PlayerRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 import io.candydoc.ddd.annotations.Aggregate;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class Race {
   }
 
   public PlayerFallen playerFallen(PlayerId playerId){
-    return PlayerFallen.of(playerId);
+    return new PlayerFallen(playerId);
   }
 
   public void replacePlayer(ReplacePlayer replacePlayer, PlayerRepository playerRepository){

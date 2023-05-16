@@ -1,7 +1,6 @@
 package fr.ipponLille.menu.useCase;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.command.InitializeVehicle;
 import fr.ipponLille.menu.event.EventPublisher;
 import fr.ipponLille.menu.event.VehicleInitialized;
@@ -9,6 +8,7 @@ import fr.ipponLille.menu.repository.KartRepository;
 import fr.ipponLille.menu.repository.ParachuteRepository;
 import fr.ipponLille.menu.repository.PlayerRepository;
 import fr.ipponLille.menu.repository.WheelsRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public class InitializeVehicleUseCase extends AbstractUseCase {
   private PlayerRepository playerRepository;

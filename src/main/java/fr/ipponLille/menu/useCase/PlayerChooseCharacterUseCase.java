@@ -1,12 +1,12 @@
 package fr.ipponLille.menu.useCase;
 
 import fr.ipponLille.menu.Player;
-import fr.ipponLille.menu.PlayerId;
 import fr.ipponLille.menu.command.ChooseCharacter;
 import fr.ipponLille.menu.event.CharacterChosen;
 import fr.ipponLille.menu.event.EventPublisher;
 import fr.ipponLille.menu.repository.CharacterRepository;
 import fr.ipponLille.menu.repository.PlayerRepository;
+import fr.ipponLille.sharedKernel.PlayerId;
 
 public class PlayerChooseCharacterUseCase extends AbstractUseCase {
   private final PlayerRepository playerRepository;
