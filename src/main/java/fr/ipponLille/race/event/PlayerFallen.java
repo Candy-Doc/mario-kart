@@ -5,7 +5,7 @@ import io.candydoc.ddd.annotations.DomainEvent;
 
 @DomainEvent(description = "When a player fall")
 public class PlayerFallen {
-  private PlayerId playerId;
+  private final PlayerId playerId;
 
   public PlayerFallen(PlayerId playerId) {
     this.playerId = playerId;

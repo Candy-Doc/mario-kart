@@ -6,7 +6,7 @@ import io.candydoc.ddd.annotations.DomainEvent;
 
 @DomainEvent
 public class VehicleValidated extends ElementForPlayer {
-  private Vehicle vehicle;
+  private final Vehicle vehicle;
 
   public VehicleValidated(PlayerId id, Vehicle vehicle) {
     super(id);
