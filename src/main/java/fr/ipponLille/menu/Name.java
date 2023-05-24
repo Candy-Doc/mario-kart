@@ -1,5 +1,8 @@
 package fr.ipponLille.menu;
 
+import io.candydoc.ddd.annotations.ValueObject;
+
+@ValueObject
 public class Name {
   private String value;
 
@@ -7,7 +10,4 @@ public class Name {
     this.value = value;
   }
 
-  public static Name of(String value) {
-    return new Name(value);
-  }
 }

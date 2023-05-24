@@ -6,11 +6,9 @@ import io.candydoc.ddd.annotations.DomainEvent;
 
 @DomainEvent()
 public class VehicleInitialized extends ElementForPlayer{
-  private final Vehicle vehicle;
 
-  public VehicleInitialized(PlayerId id, Vehicle vehicle) {
+  public VehicleInitialized(PlayerId id) {
     super(id);
-    this.vehicle = vehicle;
   }
 
 //  public static VehicleInitialized of(PlayerId id, Vehicle vehicle){
