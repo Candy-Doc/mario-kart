@@ -28,7 +28,7 @@ jobs:
       - name: Push the candy-data.json on the standalone project
         run: |
           git checkout standalone
-          cp candy-build/candy-data.json ./asset/
-          git add asset/candy-data.json
+          mv ./candy-build/* docs/
+          git add docs/
           git commit -m "Update candy-data.json"
           git push
