@@ -29,7 +29,7 @@ public class Player {
   public CharacterChosen chooseCharacter(ChooseCharacter chooseCharacter, CharacterRepository characterRepository) {
     Character character = characterRepository.fromName(chooseCharacter.getName()).orElseThrow(() -> new IllegalArgumentException("Character doesn't exist"));
     this.character = character;
-    return new CharacterChosen(this.id, character);
+    return new CharacterChosen(this.id, character.getName());
   }
 
   public VehicleInitialized initializeVehicle(InitializeVehicle initializeVehicle, KartRepository kartRepository, WheelsRepository wheelsRepository, ParachuteRepository parachuteRepository) {
@@ -38,25 +38,25 @@ public class Player {
     Parachute parachute = parachuteRepository.fromId(initializeVehicle.getParachuteId()).orElseThrow(() -> new IllegalArgumentException("Parachute doesn't exist"));
     Vehicle vehicle = new Vehicle(kart, wheels, parachute);
     this.vehicle = vehicle;
-    return new VehicleInitialized(this.id, vehicle);
+    return new VehicleInitialized(this.id);
   }
 
   public KartChosen chooseKart(ChooseKart chooseKart, KartRepository kartRepository) {
     Kart kart = kartRepository.fromId(chooseKart.getKartId()).orElseThrow(() -> new IllegalArgumentException("Kart doesn't exist"));
     this.vehicle.setKart(kart);
-    return new KartChosen(this.id, kart);
+    return new KartChosen(this.id, kart.getKartId());
   }
 
   public WheelsChosen chooseWheels(ChooseWheels chooseWheels, WheelsRepository wheelsRepository) {
     Wheels wheels = wheelsRepository.fromId(chooseWheels.getWheelsId()).orElseThrow(() -> new IllegalArgumentException("Wheels doesn't exist"));
     this.vehicle.setWheels(wheels);
-    return new WheelsChosen(this.id, wheels);
+    return new WheelsChosen(this.id, wheels.getWheelsId());
   }
 
   public ParachuteChosen chooseParachute(ChooseParachute chooseParachute, ParachuteRepository parachuteRepository) {
     Parachute parachute = parachuteRepository.fromId(chooseParachute.getParachuteId()).orElseThrow(() -> new IllegalArgumentException("Parachute doesn't exist"));
     this.vehicle.setParachute(parachute);
-    return new ParachuteChosen(this.id, parachute);
+    return new ParachuteChosen(this.id, parachute.getParachuteId());
   }
 
   public PlayerId getId() {

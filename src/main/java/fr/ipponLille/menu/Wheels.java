@@ -1,9 +1,10 @@
 package fr.ipponLille.menu;
 
 import fr.ipponLille.model.ObjectWithStatistic;
+import io.candydoc.ddd.annotations.DomainEntity;
 import io.candydoc.ddd.annotations.ValueObject;
 
-@ValueObject
+@DomainEntity
 public class Wheels extends ObjectWithStatistic {
 
   private WheelsId wheelsId;
@@ -13,4 +14,7 @@ public class Wheels extends ObjectWithStatistic {
     wheelsId = new WheelsId(id);
   }
 
+  public WheelsId getWheelsId() {
+    return wheelsId;
+  }
 }

@@ -17,7 +17,7 @@ public class PlayerValidateVehicleUseCase extends AbstractUseCase {
 
   public void execute(ValidateVehicle validateVehicle) {
     Player player = playerRepository.get(new PlayerId(validateVehicle.getPlayerId()));
-    VehicleValidated vehicleValidated = new VehicleValidated(player.getId(), player.getVehicle());
+    VehicleValidated vehicleValidated = new VehicleValidated(player.getId());
     eventPublisher.publish(vehicleValidated);
   }
 }
