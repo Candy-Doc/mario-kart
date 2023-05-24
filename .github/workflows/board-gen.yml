@@ -1,15 +1,32 @@
 name: generate-candy-board
 on:
-  pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+  push:
+    branches:
+      - main
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: Candy-doc/candy-action@v1
-        env:
-          CANDY_DOC_INPUT_PATH: ./input.json
-          CANDY_DOC_OUTPUT_PATH: ./target/
-          CANDY_DOC_BOARD_VERSION: 1.O.1
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Generate board with candy-cli
+        run: candy-doc build ./target/candy-doc/ubiquitous-language/
+
+      - name: Push the candy-data.json on the standalone project
+        run: |
+          git checkout standalone
+          cp candy-build/candy-data.json ./asset/
+          git add asset/candy-data.json
+          git commit -m "Update candy-data.json"
+          git push
